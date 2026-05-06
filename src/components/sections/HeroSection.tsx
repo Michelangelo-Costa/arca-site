@@ -1,6 +1,6 @@
 import { Download, MonitorCheck } from 'lucide-react';
 import { Reveal } from '../ui/Reveal';
-import { asset, downloadFileName, downloadUrl } from '../../lib/assets';
+import { asset, downloadSizeLabel, downloadUrl } from '../../lib/assets';
 
 export function HeroSection() {
   return (
@@ -41,7 +41,6 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col items-start gap-5">
               <a
                 href={downloadUrl}
-                download={downloadFileName}
                 className="interactive-lift inline-flex min-h-14 items-center justify-center gap-3 rounded-md bg-white px-6 py-4 text-lg font-black text-siap-blue shadow-soft transition hover:bg-siap-teal hover:text-siap-midnight focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-siap-navy sm:text-xl"
               >
                 <Download aria-hidden className="h-6 w-6" strokeWidth={2.6} />
@@ -55,6 +54,8 @@ export function HeroSection() {
                 </span>
                 <span className="h-4 w-px bg-siap-blue/70" />
                 <span>Versão 0.1.0</span>
+                <span className="h-4 w-px bg-siap-blue/70" />
+                <span>Instalador {downloadSizeLabel}</span>
               </div>
             </div>
           </Reveal>

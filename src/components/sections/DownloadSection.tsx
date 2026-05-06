@@ -1,10 +1,11 @@
 import { BadgeCheck, Cloud, MonitorDown, XCircle } from 'lucide-react';
-import { asset, downloadFileName, downloadUrl } from '../../lib/assets';
+import { asset, downloadSizeLabel, downloadUrl } from '../../lib/assets';
 import { Reveal } from '../ui/Reveal';
 
 const downloadHighlights = [
   { label: 'Windows 10 e 11', Icon: MonitorDown },
   { label: 'Versão 0.1.0', Icon: BadgeCheck },
+  { label: `Instalador ${downloadSizeLabel}`, Icon: BadgeCheck },
   { label: 'API oficial SIAPESQ', Icon: Cloud },
 ];
 
@@ -32,7 +33,7 @@ export function DownloadSection() {
             da SIAPESQ.
           </p>
 
-          <div className="mt-8 grid gap-3 text-sm font-black uppercase text-white sm:grid-cols-3">
+          <div className="mt-8 grid gap-3 text-sm font-black uppercase text-white sm:grid-cols-2 xl:grid-cols-4">
             {downloadHighlights.map(({ label, Icon }) => (
               <span
                 key={label}
@@ -55,7 +56,6 @@ export function DownloadSection() {
 
             <a
               href={downloadUrl}
-              download={downloadFileName}
               className="interactive-lift mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-md bg-white px-6 py-4 text-base font-black text-siap-navy transition hover:bg-siap-teal focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-siap-navy"
             >
               <MonitorDown aria-hidden className="h-6 w-6" strokeWidth={2.4} />
