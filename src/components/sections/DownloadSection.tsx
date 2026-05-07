@@ -1,4 +1,4 @@
-import { BadgeCheck, Cloud, MonitorDown, XCircle } from 'lucide-react';
+import { BadgeCheck, MonitorDown, XCircle } from 'lucide-react';
 import { asset, downloadSizeLabel, downloadUrl } from '../../lib/assets';
 import { Reveal } from '../ui/Reveal';
 
@@ -6,7 +6,6 @@ const downloadHighlights = [
   { label: 'Windows 10 e 11', Icon: MonitorDown },
   { label: 'Versão 0.1.0', Icon: BadgeCheck },
   { label: `Instalador ${downloadSizeLabel}`, Icon: BadgeCheck },
-  { label: 'API oficial SIAPESQ', Icon: Cloud },
 ];
 
 const unavailablePlatforms = ['Linux', 'macOS', 'mobile'];
@@ -24,16 +23,16 @@ export function DownloadSection() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 sm:px-8 sm:py-24 lg:min-h-screen lg:grid-cols-[1.04fr_0.96fr] lg:gap-10 lg:px-8">
         <Reveal className="max-w-3xl" variant="left" stagger>
-          <p className="text-sm font-black uppercase text-siap-teal">Download oficial</p>
+          <p className="text-sm font-black uppercase text-siap-teal">Download do projeto</p>
           <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl lg:text-6xl">
             Baixe o ARCA para Windows
           </h2>
           <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-white/84 sm:mt-6 sm:text-lg sm:leading-8 lg:text-xl">
-            Instale o aplicativo desktop e acesse o sistema de monitoramento conectado à API oficial
-            da SIAPESQ.
+            Instale a versão demonstrativa criada para o desafio técnico, com experiência desktop
+            para monitoramento e visualização de dados.
           </p>
 
-          <div className="mt-7 grid gap-3 text-xs font-black uppercase text-white sm:grid-cols-2 sm:text-sm xl:grid-cols-4">
+          <div className="mt-7 grid gap-3 text-xs font-black uppercase text-white sm:grid-cols-3 sm:text-sm">
             {downloadHighlights.map(({ label, Icon }) => (
               <span
                 key={label}
@@ -50,7 +49,7 @@ export function DownloadSection() {
           <div className="download-panel interactive-lift w-full max-w-xl p-5 sm:p-8 lg:ml-auto">
             <img src={asset('ARCA_LOGO.png')} alt="ARCA" className="w-44 max-w-full sm:w-56" />
             <p className="mt-5 text-base font-semibold leading-7 text-white/78">
-              Instalador gratuito para estações Windows usadas em rotina de monitoramento,
+              Instalador gratuito para avaliação do projeto, com rotinas de monitoramento,
               consulta e exportação de dados.
             </p>
 

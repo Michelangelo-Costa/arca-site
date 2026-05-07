@@ -12,7 +12,7 @@ export const mainNav: { left: SiteLink[]; right: SiteLink[] } = {
   ],
   right: [
     { label: 'CONTATO', href: '#contato' },
-    { label: 'SOBRE NÓS', href: '#sobre-nos' },
+    { label: 'SOBRE', href: '#sobre-nos' },
   ],
 };
 
@@ -40,10 +40,9 @@ export const footerLinks: Record<string, SiteLink[]> = {
     { label: 'Download', href: '#download' },
     { label: 'Recursos', href: '#recursos' },
   ],
-  Ecossistema: [
+  Referências: [
+    { label: 'SIAPESQ', href: 'https://siapesq.com', external: true },
     { label: 'SIAPREPS', href: 'https://siapesq.com/#/siapreps', external: true },
     { label: 'PHYTOBLOOM', href: 'https://siapesq.com/#/phytobloom', external: true },
-    { label: 'SIAPESQ', href: '#sobre-nos' },
-    { label: 'Instagram', href: 'https://www.instagram.com/siapesq', external: true },
   ],
 };

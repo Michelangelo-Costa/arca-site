@@ -13,7 +13,7 @@ function NavGroup({
 }) {
   return (
     <nav
-      aria-label={align === 'start' ? 'Produtos SIAPESQ' : 'Institucional'}
+      aria-label={align === 'start' ? 'Referências do projeto' : 'Navegação institucional'}
       className={`hidden items-center gap-7 text-lg font-black tracking-normal text-white lg:flex xl:gap-10 xl:text-xl 2xl:gap-12 2xl:text-2xl ${
         align === 'end' ? 'justify-end' : ''
       } ${className}`}
