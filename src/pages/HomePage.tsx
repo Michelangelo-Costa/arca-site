@@ -7,7 +7,7 @@ import { MapSection } from '../components/sections/MapSection';
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-siap-ice font-sans text-siap-navy">
+    <div className="min-h-screen max-w-[100vw] overflow-x-hidden bg-siap-ice font-sans text-siap-navy">
       <Header />
       <main>
         <HeroSection />

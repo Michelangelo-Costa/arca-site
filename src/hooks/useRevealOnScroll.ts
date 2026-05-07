@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useRevealOnScroll<T extends HTMLElement>(threshold = 0.24) {
+export function useRevealOnScroll<T extends HTMLElement>(threshold = 0.08) {
   const elementRef = useRef<T | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,7 +13,7 @@ export function useRevealOnScroll<T extends HTMLElement>(threshold = 0.24) {
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
       setIsVisible(true);
       return;
     }
@@ -26,7 +26,7 @@ export function useRevealOnScroll<T extends HTMLElement>(threshold = 0.24) {
         }
       },
       {
-        rootMargin: '0px 0px -24% 0px',
+        rootMargin: '0px 0px -6% 0px',
         threshold,
       },
     );
